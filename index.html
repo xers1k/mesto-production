@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-CaFxCVSr.js"></script>
+    <script type="module" crossorigin src="./assets/index-DSVbN15H.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-9yoJIgG_.css">
   </head>
   <body class="page">
@@ -20,20 +20,31 @@
           class="logo header__logo"
         />
       </header>
+
       <main class="content">
         <section class="profile page__section">
           <div class="profile__image"></div>
           <div class="profile__info">
             <h1 class="profile__title"></h1>
-            <button class="profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
+            <button
+              class="profile__edit-button"
+              type="button"
+              aria-label="Редактировать профиль"
+            ></button>
             <p class="profile__description"></p>
           </div>
-          <button class="profile__add-button" type="button" aria-label="Добавить карточку"></button>
+          <button
+            class="profile__add-button"
+            type="button"
+            aria-label="Добавить карточку"
+          ></button>
         </section>
+
         <section class="places page__section">
           <ul class="places__list"></ul>
         </section>
       </main>
+
       <footer class="footer page__section">
         <p class="footer__copyright">© 2025 Mesto Russia</p>
       </footer>
@@ -58,6 +69,7 @@
               />
               <span class="popup__error user-name-error" id="user-name-error"></span>
             </label>
+
             <label class="popup__label">
               <input
                 type="text"
@@ -69,9 +81,17 @@
                 maxlength="200"
                 required
               />
-              <span class="popup__error user-description-error" id="user-description-error"></span>
+              <span
+                class="popup__error user-description-error"
+                id="user-description-error"
+              ></span>
             </label>
-            <button type="submit" class="button popup__button popup__button_disabled" disabled>
+
+            <button
+              type="submit"
+              class="button popup__button popup__button_disabled"
+              disabled
+            >
               Сохранить
             </button>
           </form>
@@ -98,6 +118,7 @@
               />
               <span class="popup__error place-name-error" id="place-name-error"></span>
             </label>
+
             <label class="popup__label">
               <input
                 type="url"
@@ -109,7 +130,12 @@
               />
               <span class="popup__error place-link-error" id="place-link-error"></span>
             </label>
-            <button type="submit" class="button popup__button popup__button_disabled" disabled>
+
+            <button
+              type="submit"
+              class="button popup__button popup__button_disabled"
+              disabled
+            >
               Создать
             </button>
           </form>
@@ -129,9 +155,7 @@
           <button type="button" class="popup__close" aria-label="Закрыть"></button>
           <h3 class="popup__title">Вы уверены?</h3>
           <form class="popup__form" name="remove-card" novalidate>
-            <button type="submit" class="button popup__button">
-              Да
-            </button>
+            <button type="submit" class="button popup__button">Да</button>
           </form>
         </div>
       </div>
@@ -150,12 +174,30 @@
                 placeholder="Ссылка на изображение"
                 required
               />
-              <span class="popup__error user-avatar-error" id="user-avatar-error"></span>
+              <span
+                class="popup__error user-avatar-error"
+                id="user-avatar-error"
+              ></span>
             </label>
-            <button type="submit" class="button popup__button popup__button_disabled" disabled>
+
+            <button
+              type="submit"
+              class="button popup__button popup__button_disabled"
+              disabled
+            >
               Сохранить
             </button>
           </form>
+        </div>
+      </div>
+
+      <div class="popup popup_type_info">
+        <div class="popup__content popup__content_content_info">
+          <button type="button" class="popup__close" aria-label="Закрыть"></button>
+          <h3 class="popup__title">Статистика карточек</h3>
+          <dl class="popup__info"></dl>
+          <h4 class="popup__text">Популярные карточки:</h4>
+          <ul class="popup__list"></ul>
         </div>
       </div>
     </div>
@@ -164,16 +206,35 @@
       <li class="places__item card">
         <img class="card__image" src="" alt="" />
         <div class="card__control">
-          <button type="button" class="card__control-button card__control-button_type_delete" aria-label="Удалить карточку"></button>
+          <button
+            type="button"
+            class="card__control-button card__control-button_type_delete"
+            aria-label="Удалить карточку"
+          ></button>
         </div>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <div class="card__likes">
-            <button type="button" class="card__like-button" aria-label="Поставить лайк"></button>
+            <button
+              type="button"
+              class="card__like-button"
+              aria-label="Поставить лайк"
+            ></button>
             <p class="card__like-count"></p>
           </div>
         </div>
       </li>
+    </template>
+
+    <template id="popup-info-definition-template">
+      <div class="popup__info-item">
+        <dt class="popup__info-term"></dt>
+        <dd class="popup__info-description"></dd>
+      </div>
+    </template>
+
+    <template id="popup-info-user-preview-template">
+      <li class="popup__list-item popup__list-item_type_badge"></li>
     </template>
 
   </body>
